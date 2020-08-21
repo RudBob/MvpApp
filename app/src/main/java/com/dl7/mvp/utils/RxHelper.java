@@ -19,8 +19,8 @@ public final class RxHelper {
 
     /**
      * 倒计时
-     * @param time
-     * @return
+     * @param time 传入的事件,默认单位是second
+     * @return 返回一个倒计时对象
      */
     public static Observable<Integer> countdown(int time) {
         if (time < 0) {

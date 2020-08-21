@@ -49,6 +49,10 @@ public class SplashActivity extends BaseActivity {
                         _doSkip();
                     }
 
+                    /**
+                     * 每次next会改变按钮的文字
+                     * @param integer 剩余时间
+                     */
                     @Override
                     public void onNext(Integer integer) {
                         mSbSkip.setText("跳过 " + integer);
@@ -68,7 +72,6 @@ public class SplashActivity extends BaseActivity {
     @Override
     public void onBackPressed() {
         // 不响应后退键
-        return;
     }
 
     @OnClick(R.id.sb_skip)

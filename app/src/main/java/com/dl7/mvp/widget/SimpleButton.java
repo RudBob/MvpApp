@@ -29,6 +29,7 @@ public class SimpleButton extends View {
     public final static int SHAPE_ROUND_RECT = 101;
     public final static int SHAPE_ARC = 102;
     public final static int SHAPE_RECT = 103;
+
     // 类型模式：正常、可选中、图标选中消失、图标选中切换
     public final static int MODE_NORMAL = 201;
     public final static int MODE_CHECK = 202;
@@ -36,9 +37,11 @@ public class SimpleButton extends View {
     public final static int MODE_ICON_CHECK_CHANGE = 204;
 
     // 显示外形
-    private int mTagShape = SHAPE_ROUND_RECT;
+    private int mTagShape = SHAPE_RECT;
+
     // 显示类型
     private int mTagMode = MODE_NORMAL;
+
     // 画笔
     private Paint mPaint;
     // 背景色
@@ -117,7 +120,7 @@ public class SimpleButton extends View {
         if (attrs != null) {
             final TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.SimpleButton);
             try {
-                mTagShape = a.getInteger(R.styleable.SimpleButton_sb_shape, SimpleButton.SHAPE_ROUND_RECT);
+                mTagShape = a.getInteger(R.styleable.SimpleButton_sb_shape, SimpleButton.SHAPE_RECT);
                 mTagMode = a.getInteger(R.styleable.SimpleButton_sb_mode, MODE_NORMAL);
                 if (mTagMode == MODE_CHECK || mTagMode == MODE_ICON_CHECK_INVISIBLE || mTagMode == MODE_ICON_CHECK_CHANGE) {
                     mIsAutoToggleCheck = true;
