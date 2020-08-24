@@ -60,9 +60,12 @@ public class NewsMainFragment extends BaseFragment<IRxBusPresenter> implements I
     @Override
     protected void initViews() {
         initToolBar(mToolBar, true, "新闻");
+        // 新闻界面的右上角标识栏
         setHasOptionsMenu(true);
+
         mViewPager.setAdapter(mPagerAdapter);
         mTabLayout.setupWithViewPager(mViewPager);
+
         mPresenter.registerRxBus(ChannelEvent.class, new Action1<ChannelEvent>() {
             @Override
             public void call(ChannelEvent channelEvent) {

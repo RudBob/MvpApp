@@ -11,5 +11,9 @@
     <string name="nothing">nothing</string>
     <string name="user_name">User Name</string>
     <string name="back">back</string>
+    <string name="my_channel">我的栏目</string>
+    <string name="do_operation">长按拖拽排序或左滑删除</string>
+    <string name="more_channel">更多栏目</string>
+    <string name="click_add">点击添加</string>
 
 </resources>

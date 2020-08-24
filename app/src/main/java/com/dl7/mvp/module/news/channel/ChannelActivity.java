@@ -70,6 +70,7 @@ public class ChannelActivity extends BaseActivity<IChannelPresenter> implements 
         initToolBar(mToolbar, true, "栏目管理");
         RecyclerViewHelper.initRecyclerViewG(this, mRvCheckedList, mCheckedAdapter, 4);
         RecyclerViewHelper.initRecyclerViewG(this, mRvUncheckedList, mUncheckedAdapter, 4);
+        // 启动拖拽和滑动
         RecyclerViewHelper.startDragAndSwipe(mRvCheckedList, mCheckedAdapter, 3);
         // 设置动画
         mRvCheckedList.setItemAnimator(new ScaleInAnimator());
