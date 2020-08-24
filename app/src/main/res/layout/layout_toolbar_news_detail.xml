@@ -36,13 +36,11 @@
             android:id="@+id/tv_title"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="10dp"
+            android:ellipsize="end"
             android:gravity="start|center_vertical"
             android:maxLines="1"
             android:textColor="@android:color/white"
             android:textSize="20sp"
-            android:ellipsize="end"
             tools:text="测试标题测试标题测试标题测试标题测试标题" />
     </LinearLayout>
 
