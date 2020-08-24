@@ -109,6 +109,7 @@ public class HomeActivity extends BaseActivity implements NavigationView.OnNavig
         // 获取堆栈里有几个
         final int stackEntryCount = getSupportFragmentManager().getBackStackEntryCount();
         if (mDrawerLayout.isDrawerOpen(GravityCompat.START)) {
+            // 关闭侧边栏
             mDrawerLayout.closeDrawer(GravityCompat.START);
         } else if (stackEntryCount == 1) {
             // 如果剩一个说明在主页，提示按两次退出app
@@ -155,6 +156,9 @@ public class HomeActivity extends BaseActivity implements NavigationView.OnNavig
         navView.setNavigationItemSelectedListener(this);
     }
 
+    /**
+     * 申请访问存储控件的权限.
+     */
     private void _getPermission() {
         new RxPermissions(this).request(Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE)
                 .subscribe(new Action1<Boolean>() {

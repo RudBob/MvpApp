@@ -164,7 +164,9 @@ public abstract class BaseActivity<T extends IBasePresenter> extends RxAppCompat
      */
     protected void initToolBar(Toolbar toolbar, boolean homeAsUpEnabled, String title) {
         toolbar.setTitle(title);
+        // 设置传入的toolbar为顶部框
         setSupportActionBar(toolbar);
+        // 返回键
         getSupportActionBar().setDisplayHomeAsUpEnabled(homeAsUpEnabled);
     }
 

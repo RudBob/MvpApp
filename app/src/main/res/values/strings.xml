@@ -9,5 +9,7 @@
     <string name="title_activity_home">HomeActivity</string>
     <string name="network_error">网络异常，点击重试</string>
     <string name="nothing">nothing</string>
+    <string name="user_name">User Name</string>
+    <string name="back">back</string>
 
 </resources>
