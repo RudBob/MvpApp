@@ -44,9 +44,11 @@ android {
             signingConfig signingConfigs.debug
         }
 
-        greendao{
+        greendao {
+            // 数据库版本号
             schemaVersion 4
-//            targetGenDir 'src/main/java'
+            // 设置DaoMaster、DaoSession、Dao 目录,请注意，这里路径用/不要用.
+            // targetGenDir 'src/main/java'
         }
     }
 

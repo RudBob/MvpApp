@@ -1,5 +1,8 @@
 package com.dl7.mvp.rxbus;
 
+import org.greenrobot.greendao.annotation.Entity;
+import org.greenrobot.greendao.annotation.Id;
+
 import java.util.HashMap;
 
 import rx.Observable;
@@ -41,6 +44,9 @@ public class RxBus {
         }
         return mInstance;
     }*/
+
+
+
 
     /**
      * 发送事件

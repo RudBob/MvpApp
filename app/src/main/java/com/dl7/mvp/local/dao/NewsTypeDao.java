@@ -31,7 +31,9 @@ public class NewsTypeDao {
     public static void updateLocalData(Context context, DaoSession daoSession) {
         sAllChannels = GsonHelper.convertEntities(AssetsHelper.readData(context, "NewsChannel"), NewsTypeInfo.class);
         NewsTypeInfoDao beanDao = daoSession.getNewsTypeInfoDao();
-        if (beanDao.count() == 0) {
+        if (beanDao.count() < 3) {
+            // 小于三,说明出现了问题,需要重置
+            beanDao.deleteAll();
             beanDao.insertInTx(sAllChannels.subList(0, 3));
         }
     }
